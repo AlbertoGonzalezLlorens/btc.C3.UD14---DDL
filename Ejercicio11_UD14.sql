@@ -6,7 +6,7 @@ nombre nvarchar(100)
 create table investigadores(
 dni varchar(8) not null primary key,
 nom_apels nvarchar(255),
-facultad int,
+facultad int not null,
 foreign key (facultad)
 references facultad(codigo)
 on delete cascade on update cascade
@@ -15,7 +15,7 @@ on delete cascade on update cascade
 create table equipos(
 num_serie char(4) not null primary key,
 nombre nvarchar(100),
-facultad int,
+facultad int not null,
 foreign key (facultad)
 references facultad(codigo)
 on delete cascade on update cascade
